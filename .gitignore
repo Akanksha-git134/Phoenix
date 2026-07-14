@@ -1,0 +1,71 @@
+# ===============================
+# Python
+# ===============================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+
+# ===============================
+# Environment Variables
+# ===============================
+.env
+.env.*
+
+# ===============================
+# Flask
+# ===============================
+instance/
+.flaskenv
+
+# ===============================
+# Jupyter
+# ===============================
+.ipynb_checkpoints/
+
+# ===============================
+# VS Code
+# ===============================
+.vscode/
+
+# ===============================
+# PyCharm
+# ===============================
+.idea/
+
+# ===============================
+# OS Files
+# ===============================
+.DS_Store
+Thumbs.db
+
+# ===============================
+# Logs
+# ===============================
+*.log
+
+# ===============================
+# Build Files
+# ===============================
+build/
+dist/
+*.egg-info/
+
+
+# Uncomment these if you DON'T want to upload your trained model
+# model.pkl
+# vectorizer.pkl
+
+# ===============================
+# Testing
+# ===============================
+.pytest_cache/
+.coverage
+htmlcov/
+
+dataset/processed_fake_job_postings.csv

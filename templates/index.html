@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#242F9B">
+
+    <title>Phoenix - AI Job Safety Assistant</title>
+    
+    <link rel="icon"
+      type="image/png"
+      href="{{ url_for('static', filename='icons/123.png') }}">
+
+    <link rel="apple-touch-icon"
+      href="{{ url_for('static', filename='icons/123.png') }}">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <nav class="navbar" aria-label="Main Navigation">
+
+            <a href="#hero" class="logo">
+
+                <img src="{{ url_for('static', filename='icons/123.png') }}"
+                 alt="Phoenix Logo"
+                 class="logo-img">
+                
+                <div class="logo-text">
+
+                    <h2>Phoenix</h2>
+                    <p>AI Job Safety Assistant</p>
+
+                </div>
+            </a>
+
+            <button class="menu-btn" aria-label="Toggle Menu">
+                ☰
+            </button>
+
+            <ul class="nav-links">
+
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#workflow">How It Works</a></li>
+                <li><a href="#analyzer">Analyze</a></li>
+
+            </ul>
+
+            <button class="theme-btn"
+                    aria-label="Toggle Dark Mode">
+
+                🌙
+
+            </button>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <section id="hero">
+            <div class="hero-content">
+
+                <div class="hero-text">
+
+                    <span class="hero-badge">
+                🛡 AI-Powered Job Protection
+            </span>
+
+                    <h1>
+                        Detect Fake Job Scams
+                        <span>Before They Detect You</span>
+                    </h1>
+
+                    <p>
+                Analyze job postings using Machine Learning and
+                Generative AI to identify suspicious listings,
+                detect red flags, and receive actionable safety
+                recommendations.
+            </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#analyzer" class="primary-btn">
+                    Analyze Job
+                </a>
+
+                        <a href="#features" class="secondary-btn">
+                    Learn More
+                </a>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-visual">
+
+                    <div class="hero-image">
+
+                        <img src="{{url_for('static', filename='icons/123.png')}}" alt="Phoenix AI"
+                        class="hero-logo"
+                        loading="lazy">
+
+                    </div>
+                    
+
+                </div>
+            </div>
+        </section>
+
+        <section id="features">
+
+            <div class="section-heading">
+
+                <span>WHY PHOENIX?</span>
+
+                <h2>
+            Powerful Features Built to
+            Protect Every Job Seeker
+        </h2>
+
+                <p>
+            Phoenix combines Machine Learning,
+            Generative AI and cybersecurity best
+            practices to help you identify suspicious
+            job postings before you apply.
+        </p>
+
+            </div>
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        🧠
+
+                    </div>
+
+                    <h3>Machine Learning Detection</h3>
+
+                    <p>
+
+                        Classifies job postings using a trained
+                        machine learning model that detects
+                        fraudulent patterns in text.
+
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        ⚠️
+
+                    </div>
+
+                    <h3>Risk Analysis</h3>
+
+                    <p>
+
+                Detects warning signs like registration
+                fees, unrealistic salaries, urgency,
+                suspicious wording and more.
+
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                🤖
+
+            </div>
+
+                    <h3>Generative AI Insights</h3>
+
+                    <p>
+
+                AI explains why a job appears
+                suspicious in natural language,
+                making every prediction easier
+                to understand.
+
+            </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        🛡️
+
+            </div>
+
+                    <h3>Safety Recommendations</h3>
+
+                    <p>
+
+                Receive practical advice on what to
+                verify before sharing personal
+                information or accepting an offer.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="workflow">
+
+             <div class="section-heading">
+
+                <span>HOW IT WORKS</span>
+
+                <h2>
+                    Detect Job Scams in
+                    Four Simple Steps
+                </h2>
+
+                <p>
+                    Phoenix makes job verification simple.
+                    Paste a job description and receive an
+                    intelligent fraud assessment within seconds.
+                </p>
+
+            </div>
+
+            <div class="timeline">
+
+                <div class="timeline-step">
+
+                    <div class="step-number">
+                        1
+                    </div>
+
+                    <h3>Paste Job</h3>
+
+                    <p>
+                        Copy the complete job posting
+                        into the analyzer.
+                    </p>
+
+                </div>
+
+                <div class="timeline-line"></div>
+
+                <div class="timeline-step">
+
+                    <div class="step-number">
+                        2
+                    </div>
+
+                    <h3>AI Analysis</h3>
+
+                    <p>
+                        Machine Learning analyzes
+                        patterns and suspicious wording.
+                    </p>
+
+                </div>
+
+                <div class="timeline-line"></div>
+
+                <div class="timeline-step">
+
+                    <div class="step-number">
+                        3
+                     </div>
+
+                    <h3>Risk Detection</h3>
+
+                    <p>
+                        Phoenix identifies fraud
+                        indicators and assigns
+                        a confidence score.
+                    </p>
+
+                </div>
+
+                <div class="timeline-line"></div>
+
+                <div class="timeline-step">
+
+                    <div class="step-number">
+                        4
+                    </div>
+
+                    <h3>Make an Informed Decision</h3>
+
+                    <p>
+                        Review the prediction, confidence score,
+                        AI Explanation and safety recommendations 
+                        before applying.
+                    </p>
+
+                 </div>
+
+             </div>
+
+        </section>
+
+        <section id="analyzer">
+
+            <div class="section-heading">
+
+                <span>AI ANALYZER</span>
+
+                <h2>
+                    Analyze Any Job Posting
+                </h2>
+
+                <p>
+                    Paste the complete job description here... Example: Software Engineer Intern Location: Delhi Salary...
+                </p>
+
+            </div>
+
+            <div class="analyzer-card">
+
+                <form method="POST" autocomplete="off">
+                    
+                    <label for="job-description" class="sr-only">
+                        Job Description
+                    </label>
+
+                    <textarea
+                        id="job-description"
+                        name="job_description"
+                        rows="14"
+                        maxlength="50000"
+                        placeholder="Paste the complete job description here..."
+                        required></textarea>
+
+                    <div class="form-footer">
+
+                        <span id="char-count">
+                            Characters: 0
+                        </span>
+
+                        <div class="button-group">
+
+                            <button
+                                type="reset"
+                                class="clear-btn">
+
+                                    Clear
+
+                            </button>
+
+                            <button
+                                type="submit"
+                                class="analyze-btn"
+                                aria-label="Analyze Job Posting">
+
+                                Analyze with AI
+
+                            </button>
+
+                        </div>
+
+                        </div>
+
+                    </form>
+                    
+                    {% if prediction %}
+
+                    <section class="results-section" id="results">
+
+                        <div class="section-heading">
+                            <span>AI REPORT</span>
+                            <h2>Analysis Results</h2>
+                        </div>
+
+                        <p class="report-subtitle">
+                            Phoenix has completed the security analysis of the submitted job posting.
+                            Review the results below before making any application decision.
+                        </p>
+
+                        <div class="results-grid">
+
+                            <div class="result-card prediction-card">
+
+                                <span class="card-label">Prediction</span>
+
+                                <h2>
+                                    {% if prediction == "Real Job" %}
+                                        🟢 Legitimate Job Posting
+                                    {% else %}
+                                        🔴 Fraudulent Job Posting
+                                    {% endif %}
+                                </h2>
+
+                            </div>
+
+                            <div class="result-card">
+
+                                <span class="card-label">Confidence</span>
+
+                                <h2>{{ probability }}%</h2>
+
+                            </div>
+
+                            <div class="result-card">
+
+                                <span class="card-label">Risk Level</span>
+
+                                <h2>
+                                    {% if prediction == "Real Job" %}
+                                        🟢 Low
+                                    {% else %}
+                                        🔴 High
+                                    {% endif %}
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+                        <div class="ai-card">
+
+                            <div class="ai-header">
+
+                                <span class="ai-icon">🤖</span>
+
+                                <div>
+                                    <h3>Phoenix AI</h3>
+                                    <p>Analysis Summary</p>
+                                </div>
+
+                            </div>
+
+                            <div class="ai-message">
+                                {{ ai_explanation }}
+                            </div>
+
+                        </div>
+
+                        {% if lime_explanation %}
+
+                        <div class="tips-card">
+
+                            <h3>Why Phoenix Made This Prediction</h3>
+
+                            <div class="tips-list">
+
+                                {% for word, weight in lime_explanation %}
+
+                                <div class="tip-item">
+
+                                    {% if weight > 0 %}
+
+                                        <span class="tip-icon">🚩</span>
+
+                                        <span>
+                                            <strong>{{ word }}</strong>
+                                        is a suspicious keyword that contributed to predicting this posting as a fake job.
+                                        </span>
+
+                                    {% else %}
+
+                                        <span class="tip-icon">✅</span>
+
+                                        <span>
+                                            <strong>{{ word }}</strong>
+                                        is commonly associated with genuine job postings and reduced the fraud score.
+                                    </span>
+
+                                {% endif %}
+
+                            </div>
+
+                            {% endfor %}
+
+                        </div>
+
+                    </div>
+
+                    {% endif %}
+
+                    <div class="tips-card">
+
+                        <h3>Safety Recommendations</h3>
+
+                        <div class="tips-list">
+
+                             {% for tip in safety_tips %}
+
+                        <div class="tip-item">
+
+                            <span class="tip-icon">✔</span>
+
+                            <span>{{ tip }}</span>
+
+                        </div>
+
+                        {% endfor %}
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            {% endif %}
+        
+        </div>
+
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-logo">
+
+                <img src="{{ url_for('static', filename='icons/123.png') }}"
+                     alt="Phoenix Logo">
+
+                <div>
+
+                    <h2>Phoenix</h2>
+
+                    <p>AI Job Safety Assistant</p>
+
+                </div>
+
+            </div>
+
+            <div class="footer-right">
+
+                <h4>Quick Links</h4>
+
+                <ul>
+
+                    <li><a href="#hero">Home</a></li>
+
+                    <li><a href="#features">Features</a></li>
+
+                    <li><a href="#workflow">How It Works</a></li>
+
+                    <li><a href="#analyzer">Analyze</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="copyright">
+
+            © 2026 Phoenix • AI Job Safety Assistant
+
+        </p>
+
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+{% if prediction %}
+<script>
+
+window.onload = function(){
+
+    document.getElementById("results")
+            .scrollIntoView({
+                behavior:"smooth"
+            });
+
+}
+
+</script>
+{% endif %}
+
+</body>
+</html>
