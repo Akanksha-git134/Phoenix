@@ -341,6 +341,12 @@
 
             <div class="analyzer-card">
 
+                {% if error_message %}
+                <div class="error-box">
+                    {{ error_message }}
+                </div>
+                {% endif %}
+
                 <form method="POST" autocomplete="off">
                     
                     <label for="job-description" class="sr-only">
@@ -365,15 +371,17 @@
 
                             <button
                                 type="reset"
+                                id="clearBtn"
                                 class="clear-btn">
 
                                     Clear
-
+                                
                             </button>
 
                             <button
                                 type="submit"
-                                class="analyze-btn"
+                                id="analyzebtn"
+                                class="analyze-Btn"
                                 aria-label="Analyze Job Posting">
 
                                 Analyze with AI
@@ -392,12 +400,11 @@
 
                         <div class="section-heading">
                             <span>AI REPORT</span>
-                            <h2>Analysis Results</h2>
+                            <h2>Phoenix Analysis Report</h2>
                         </div>
 
                         <p class="report-subtitle">
-                            Phoenix has completed the security analysis of the submitted job posting.
-                            Review the results below before making any application decision.
+                            Phoenix has completed an automated Machine Learning and AI assessment of the submitted job posting. Review the findings carefully before proceeding with any application.
                         </p>
 
                         <div class="results-grid">
@@ -407,11 +414,17 @@
                                 <span class="card-label">Prediction</span>
 
                                 <h2>
-                                    {% if prediction == "Real Job" %}
+                                    
+                                    {% if prediction == "Legitimate Job" %}
                                         🟢 Legitimate Job Posting
+
+                                    {% elif prediction == "Suspicious Job" %}
+                                        🟡 Suspicious Job Posting
+
                                     {% else %}
                                         🔴 Fraudulent Job Posting
                                     {% endif %}
+
                                 </h2>
 
                             </div>
@@ -422,18 +435,31 @@
 
                                 <h2>{{ probability }}%</h2>
 
+                                <p class="confidence {{ confidence_color }}">
+                                    {{ confidence_label }}
+                                </p>
+
                             </div>
 
                             <div class="result-card">
 
-                                <span class="card-label">Risk Level</span>
+                                <span class="card-label">
+                                    Phoenix Risk Assessment
+                                </span>
 
                                 <h2>
-                                    {% if prediction == "Real Job" %}
+
+                                    {% if risk_level == "Low" %}
                                         🟢 Low
+
+                                    {% elif risk_level == "MEDIUM" %}
+                                        🟠 Medium
+
                                     {% else %}
                                         🔴 High
+
                                     {% endif %}
+
                                 </h2>
 
                             </div>
@@ -454,52 +480,14 @@
                             </div>
 
                             <div class="ai-message">
-                                {{ ai_explanation }}
+                                {% for line in ai_explanation.split('\n') %}
+                                    {% if line.strip() %}
+                                        <p>{{line}}</p>
+                                    {% endif %}
+                                {% endfor %}
                             </div>
 
                         </div>
-
-                        {% if lime_explanation %}
-
-                        <div class="tips-card">
-
-                            <h3>Why Phoenix Made This Prediction</h3>
-
-                            <div class="tips-list">
-
-                                {% for word, weight in lime_explanation %}
-
-                                <div class="tip-item">
-
-                                    {% if weight > 0 %}
-
-                                        <span class="tip-icon">🚩</span>
-
-                                        <span>
-                                            <strong>{{ word }}</strong>
-                                        is a suspicious keyword that contributed to predicting this posting as a fake job.
-                                        </span>
-
-                                    {% else %}
-
-                                        <span class="tip-icon">✅</span>
-
-                                        <span>
-                                            <strong>{{ word }}</strong>
-                                        is commonly associated with genuine job postings and reduced the fraud score.
-                                    </span>
-
-                                {% endif %}
-
-                            </div>
-
-                            {% endfor %}
-
-                        </div>
-
-                    </div>
-
-                    {% endif %}
 
                     <div class="tips-card">
 
@@ -589,12 +577,24 @@
 {% if prediction %}
 <script>
 
-window.onload = function(){
+const form=document.querySelector("form");
 
-    document.getElementById("results")
-            .scrollIntoView({
-                behavior:"smooth"
-            });
+if(form){
+    form.addEventListener("submit",()=>{
+        sessionStorage.setItem("scrollResults","true");
+    });
+}
+
+window.onload=function(){
+
+    if(sessionStorage.getItem("scrollResults")==="true"){
+
+        document.getElementById("results").scrollIntoView({
+            behavior:"smooth"
+        });
+
+        sessionStorage.removeItem("scrollResults");
+    }
 
 }
 
