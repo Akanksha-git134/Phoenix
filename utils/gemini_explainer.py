@@ -111,8 +111,6 @@ Do not use markdown except the • bullet.
     # Try every API key
     for api_key in keys:
 
-        print(f"\nUsing API key ending with ...{api_key[-6:]}")
-
         genai.configure(api_key=api_key)
 
         # Try every model
