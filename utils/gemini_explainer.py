@@ -108,7 +108,7 @@ Do not use markdown except the • bullet.
         "gemini-pro-latest",
     ]
 
-    # Try every API key
+    # Try every API key 
     for api_key in keys:
 
         genai.configure(api_key=api_key)
