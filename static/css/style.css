@@ -1402,7 +1402,7 @@ body{
         gap:12px;
     }
 
-    .analyze-btn,
+    .analyze-Btn,
     .clear-btn{
         width:100%;
     }
@@ -1564,7 +1564,7 @@ body{
    Loading Button
 =========================== */
 
-.analyze-btn.loading{
+.analyze-Btn.loading{
 
     opacity:.9;
 
@@ -1574,7 +1574,7 @@ body{
 
 }
 
-.analyze-btn.loading::after{
+.analyze-Btn.loading::after{
 
     content:"";
 
