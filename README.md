@@ -279,7 +279,7 @@ python app.py
 Open
 
 ```text
-http localhost link 
+http://127.0.0.1:5000
 ```
 
 in your browser.
@@ -370,7 +370,7 @@ Seven models were trained and compared using TF-IDF features. Precision, Recall,
 | Random Forest | 98.32% | 100.00% | 65.32% | 79.02% |
 | **Balanced Linear SVM (Calibrated) — Selected** | **98.66%** | **94.96%** | **76.30%** | **84.62%** |
 
-![Model Performance Comparison](model_performance_chart.png)
+![Model Performance Comparison](static/images/model_performance_chart.png)
 
 > Calibration (via `CalibratedClassifierCV`) was applied on top of the Balanced Linear SVM so the model can output reliable probability scores, since `LinearSVC` does not natively support `predict_proba`. These probabilities power the confidence score and risk-level bucketing shown to users.
 
