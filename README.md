@@ -2,7 +2,7 @@
   <img src="static/icons/phoenix-logo.png" alt="Phoenix Logo" width="120">
 </p>
 
-# Phoenix – AI Job Detector
+# Phoenix – AI Job Safety Assistant
 
 Phoenix is an AI-powered web application that helps job seekers identify potentially fraudulent job postings before applying.
 
