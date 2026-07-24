@@ -155,7 +155,7 @@ def home():
                         "Do not apply to this job posting.",
                         "Never send money or purchase training kits.",
                         "Report the listing on the job portal.",
-                        "Block further communication with the                     recruiter.",
+                        "Block further communication with the recruiter.",
                         "Apply only through verified company websites.                    "
                     ]
 
