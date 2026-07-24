@@ -114,6 +114,7 @@ Phoenix/
 ├── app.py
 ├── requirements.txt
 ├── Procfile
+├── .env.example
 ├── .gitignore
 ├── README.md
 │
@@ -164,7 +165,7 @@ git clone https://github.com/Akanksha-git134/Phoenix-AI-job-detector.git
 Move inside the project.
 
 ```bash
-cd Phoenix-AI-Job-Safety-Assistant
+cd Phoenix-AI-job-detector
 ```
 
 ---
@@ -227,25 +228,33 @@ pip install -r requirements.txt
 
 ---
 
-## Step 6 — Create Environment Variables
+## Step 6 — Set Up Environment Variables
 
-Create a file named
+Phoenix ships with a `.env.example` template so you don't have to write the file from scratch.
 
-```text
-.env
+Copy it to a real `.env` file:
+
+Windows
+
+```bash
+copy .env.example .env
 ```
 
-inside the project root.
+Mac/Linux
 
-Example
+```bash
+cp .env.example .env
+```
+
+Then open `.env` and replace the placeholder with your own Gemini API key:
 
 ```env
 GEMINI_API_KEY_1=YOUR_GEMINI_API_KEY
 ```
 
-Phoenix supports multiple API keys.
+You can get a free key from **https://aistudio.google.com/app/apikey**.
 
-Example
+Phoenix supports multiple API keys, and will automatically switch to the next one if a key reaches its quota:
 
 ```env
 GEMINI_API_KEY_1=xxxxxxxx
@@ -255,7 +264,9 @@ GEMINI_API_KEY_2=xxxxxxxx
 GEMINI_API_KEY_3=xxxxxxxx
 ```
 
-The application automatically switches to the next key if one reaches its quota.
+Only `GEMINI_API_KEY_1` is required — the others are optional.
+
+> **Important:** never commit your real `.env` file to GitHub. It's already listed in `.gitignore`, so `git status` should never show it as a tracked change. Only `.env.example` (with no real keys inside it) should be pushed.
 
 ---
 
@@ -268,7 +279,7 @@ python app.py
 Open
 
 ```text
-http://localhost link
+http localhost link 
 ```
 
 in your browser.
@@ -288,6 +299,8 @@ Procfile
 ```text
 web: gunicorn app:app
 ```
+
+> **Note:** when deploying, `.env` is not uploaded (it's gitignored). Instead, add each `GEMINI_API_KEY_*` as an Environment Variable directly in your Render dashboard under Settings → Environment.
 
 ---
 
@@ -416,6 +429,7 @@ Check
 * API key is valid
 * API key is inside `.env`
 * `.env` is in the project root
+* You copied `.env.example` to `.env` (not just renamed it in a different folder)
 
 ---
 
@@ -495,7 +509,7 @@ The first request may take
 
 **Akanksha**
 
-B.Tech 
+B.Tech
 
 Computer Science Engineering in AI
 
