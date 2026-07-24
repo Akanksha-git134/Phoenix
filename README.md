@@ -2,7 +2,7 @@
   <img src="static/icons/phoenix-logo.png" alt="Phoenix Logo" width="120">
 </p>
 
-# 🔥 Phoenix – AI Job Safety Assistant
+# Phoenix – AI Job Detector
 
 Phoenix is an AI-powered web application that helps job seekers identify potentially fraudulent job postings before applying.
 
@@ -158,7 +158,7 @@ Open a terminal.
 Run
 
 ```bash
-git clone https://github.com/<YOUR_USERNAME>/Phoenix-AI-Job-Safety-Assistant.git
+git clone https://github.com/Akanksha-git134/Phoenix-AI-job-detector.git
 ```
 
 Move inside the project.
@@ -268,7 +268,7 @@ python app.py
 Open
 
 ```text
-http://127.0.0.1:5000
+http://localhost link
 ```
 
 in your browser.
@@ -495,7 +495,9 @@ The first request may take
 
 **Akanksha**
 
-B.Tech Computer Science Engineering in AI
+B.Tech 
+
+Computer Science Engineering in AI
 
 Indira Gandhi Delhi Technical University for Women (IGDTUW)
 
